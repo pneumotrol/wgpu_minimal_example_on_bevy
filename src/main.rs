@@ -26,7 +26,7 @@ fn main() {
         .insert_resource(Time::<Fixed>::from_hz(FRAMERATE))
         .add_systems(Startup, startup)
         .add_systems(FixedUpdate, compute)
-        .add_systems(Update, (update_gizmos, update_angle, update_gizmos))
+        .add_systems(Update, (update_angle, update_gizmos))
         .run();
 }
 
